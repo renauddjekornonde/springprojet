@@ -4,10 +4,16 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.Entity.Etudiant;
 import com.example.demo.Repository.EtudiantRep;
 
+@Component
+@ComponentScan("com.example.demo.Repository")
+@Service
 public class EtudiantServ implements EtudiantInter{
 	@Autowired
 	private EtudiantRep er;
